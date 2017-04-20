@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class autoDoor : MonoBehaviour {
+public class AutoDoor : MonoBehaviour {
 
 	Animator anim;
 
@@ -29,7 +29,7 @@ public class autoDoor : MonoBehaviour {
 	}
 
 	void OnTriggerExit(Collider other) {
-		if (other.name == "Player") {
+		if (other.name == "Door") {
 			anim.SetBool ("IsOpen", false);
 		}
 	}

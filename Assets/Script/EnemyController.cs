@@ -17,14 +17,9 @@ public class EnemyController : MonoBehaviour {
 		hpObj = transform.Find ("HP").gameObject;
 		fullHp = hp;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.name == "Cutter01") {
+		if (other.name == "cutter01") {
 			attackPower = other.GetComponent<Weapon> ().power;
 			hp -= attackPower;
 			hpGauge.fillAmount = (float)hp / fullHp;

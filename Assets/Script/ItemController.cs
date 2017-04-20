@@ -25,7 +25,7 @@ public class ItemController : MonoBehaviour {
 	}
 
 	//接触判定
-	void OnTriggerEnter(Collider other){
+	void OnCollisionEnter(Collider other){
 		if (other.name == "Player") {
 			audioSource.PlayOneShot (getItemSound);
 			GameManager.instance.inventory.AddItem (itemType);
